@@ -1,15 +1,3 @@
-from djangochannelsrestframework.generics import GenericAsyncAPIConsumer, AsyncAPIConsumer
-
-from djangochannelsrestframework.observer import model_observer
-from djangochannelsrestframework.decorators import action
-from djangochannelsrestframework.mixins import (
-    ListModelMixin,
-    RetrieveModelMixin,
-    PatchModelMixin,
-    UpdateModelMixin,
-    CreateModelMixin,
-    DeleteModelMixin,
-)
 
 #
 # from frontdesk.models import CarEnquires
