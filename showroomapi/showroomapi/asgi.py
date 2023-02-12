@@ -17,7 +17,8 @@ from requests.consumers import RequestConsumer
 from users.consumers import UserNotificationConsumer
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'showroomapi.settings')
-
+import django
+django.setup()
 django_asgi_app = get_asgi_application()
 application = ProtocolTypeRouter({
     "http": django_asgi_app,
