@@ -17,16 +17,8 @@ def CarNameFile(instance, filename):
 
 
 class Cars(models.Model):
-    GEAR_TYPE_CHOICES = [
-        ('AMT', 'AMT'),
-        ('Manual', 'Manual'),
-        ('DCT', 'DCT'),
-    ]
-    CAR_TYPE_CHOICES = [
-        ('Sedan', 'Sedan'),
-        ('SUV', 'SUV'),
-        ('Hatchback', 'Hatchback'),
-    ]
+    GEAR_TYPE_CHOICES = [('AMT', 'AMT'), ('Manual', 'Manual'), ('DCT', 'DCT'),]
+    CAR_TYPE_CHOICES = [('Sedan', 'Sedan'), ('SUV', 'SUV'), ('Hatchback', 'Hatchback'),]
 
     user = models.ForeignKey(Account, on_delete=models.SET_NULL, related_name='usercar', null=True,blank=True)
     model_name = models.CharField(max_length=100)

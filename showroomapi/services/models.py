@@ -44,7 +44,7 @@ class ServiceInfo(models.Model):
 
 
 class ServiceHistory(models.Model):
-    service = models.ForeignKey(Services,on_delete=models.SET_NULL,null=True,related_name='service_log')
+    service = models.ForeignKey(Services,on_delete=models.SET_NULL,null=True,blank=True,related_name='service_log')  # django-doctor: disable=field-null-not-blank
     amount = models.IntegerField()
     parts_total = models.IntegerField()
     labour_charge = models.IntegerField()
